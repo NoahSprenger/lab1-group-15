@@ -1,4 +1,4 @@
-package com.example.calculator_groupe15;
+package com.example.mycalculator;
 
 import org.junit.Test;
 

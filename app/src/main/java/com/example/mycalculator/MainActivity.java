@@ -15,7 +15,7 @@ import javax.script.ScriptException;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn_clear, btn_plus, btn_minus, btn_equal;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9,btn_clear, btn_plus, btn_minus, btn_multiply, btn_equal;
     TextView text_display;
 
     // This is to evaluate the math expression
@@ -34,8 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn4 = (Button) findViewById(R.id.btn4);
         btn5 = (Button) findViewById(R.id.btn5);
         btn6 = (Button) findViewById(R.id.btn6);
+        btn7 = (Button) findViewById(R.id.btn7);
+        btn8 = (Button) findViewById(R.id.btn8);
+        btn9 = (Button) findViewById(R.id.btn9);
         btn_plus = (Button) findViewById(R.id.btn_plus);
         btn_minus = (Button) findViewById(R.id.btn_minus);
+        btn_multiply = (Button) findViewById(R.id.btn_multiply);
         btn_equal = (Button) findViewById(R.id.btn_equal);
         btn_clear = (Button) findViewById(R.id.btn_clear);
         text_display = (TextView) findViewById(R.id.textview_input_display);
@@ -50,8 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
+        btn7.setOnClickListener(this);
+        btn8.setOnClickListener(this);
+        btn9.setOnClickListener(this);
         btn_plus.setOnClickListener(this);
         btn_minus.setOnClickListener(this);
+        btn_multiply.setOnClickListener(this);
         btn_equal.setOnClickListener(this);
         btn_clear.setOnClickListener(this);
     }
@@ -77,11 +85,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn6:
                 addNumber("6");
                 break;
+            case R.id.btn7:
+                addNumber("7");
+                break;
+            case R.id.btn8:
+                addNumber("8");
+                break;
+            case R.id.btn9:
+                addNumber("9");
+                break;
             case R.id.btn_plus:
                 addNumber("+");
                 break;
             case R.id.btn_minus:
                 addNumber("-");
+                break;
+            case R.id.btn_multiply:
+                addNumber("x");
                 break;
             case R.id.btn_equal:
                 String result = null;

@@ -108,12 +108,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 addNumber("-");
                 break;
             case R.id.btn_multiply:
-                addNumber("x");
+                addNumber("*");
                 break;
-	    case R.id.btn_divide:
-		addNumber("/");
-		break;
-	    case R.id.btn_equal:
+
+
+	        case R.id.btn_divide:
+                addNumber("/");
+                break;
+	        case R.id.btn_equal:
+
+
                 String result = null;
                 try {
                     result = evaluate(text_display.getText().toString());
@@ -131,8 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_dot:
                 addNumber(".");
                 break;
-            case R.id.btn_divide:
-                addNumber("\\");
         }
     }
 
@@ -141,6 +143,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BigDecimal decimal = new BigDecimal(result);
         return decimal.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString();
     }
+
+
 
     private void addNumber(String number) {
         text_display.setText(text_display.getText() + number);

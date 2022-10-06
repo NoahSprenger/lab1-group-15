@@ -15,7 +15,7 @@ import javax.script.ScriptException;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9,btn_clear, btn_plus, btn_minus, btn_multiply, btn_equal;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9,btn_clear, btn_plus, btn_minus, btn_multiply, btn_divide , btn_dot, btn0, btn_equal;
     TextView text_display;
 
     // This is to evaluate the math expression
@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_multiply = (Button) findViewById(R.id.btn_multiply);
         btn_equal = (Button) findViewById(R.id.btn_equal);
         btn_clear = (Button) findViewById(R.id.btn_clear);
+        btn0 = (Button) findViewById(R.id.btn0);
+        btn_divide = (Button) findViewById(R.id.btn_divide);
+        btn_dot = (Button) findViewById(R.id.btn_dot);
+
         text_display = (TextView) findViewById(R.id.textview_input_display);
 
         setClickListeners();
@@ -62,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_multiply.setOnClickListener(this);
         btn_equal.setOnClickListener(this);
         btn_clear.setOnClickListener(this);
+        btn_divide.setOnClickListener(this);
+        btn0.setOnClickListener(this);
+        btn_dot.setOnClickListener(this);
     }
 
     @Override
@@ -115,6 +122,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_clear:
                 clear_display();
                 break;
+            case R.id.btn0:
+                addNumber("0");
+                break;
+            case R.id.btn_dot:
+                addNumber(".");
+                break;
+            case R.id.btn_divide:
+                addNumber("\\");
         }
     }
 

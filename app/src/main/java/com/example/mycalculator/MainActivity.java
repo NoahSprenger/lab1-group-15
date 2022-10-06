@@ -111,10 +111,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 addNumber("*");
                 break;
 
+
 	        case R.id.btn_divide:
                 addNumber("/");
                 break;
 	        case R.id.btn_equal:
+
 
                 String result = null;
                 try {

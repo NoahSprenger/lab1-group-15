@@ -110,10 +110,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_multiply:
                 addNumber("x");
                 break;
-	    case R.id.btn_divide:
-		addNumber("/");
-		break;
-	    case R.id.btn_equal:
+            case R.id.btn_divide:
+                addNumber("/");
+                break;
+	        case R.id.btn_equal:
                 String result = null;
                 try {
                     result = evaluate(text_display.getText().toString());
@@ -131,8 +131,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_dot:
                 addNumber(".");
                 break;
-            case R.id.btn_divide:
-                addNumber("\\");
         }
     }
 
